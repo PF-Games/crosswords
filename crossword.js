@@ -36,3 +36,16 @@ for (let item of shapes){
 }
 
 */
+
+let integers = [
+     1, 2, 3, 4, 5, 6, 7, 8, 9
+];
+
+let index = Math.floor(Math.random() * 8);
+
+function getNeighbor(integers, i){
+    let neighborIndex = i+1;
+    return integers[neighborIndex];
+}
+
+console.log ('The next number to ' + integers[index] + ' is ' + getNeighbor(integers, index));
