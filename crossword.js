@@ -84,6 +84,10 @@ console.log(longer('pizza', 'soup'));
 
 */
 
+////////////////////////////////////////////////////////////////
+
+/* FUNCTION TO DESCRIBE THE LAST LETTER OF A WORD
+
 function lastLetter(word){
     let lastLetter = word.length -1;
     return word[lastLetter];
@@ -91,3 +95,5 @@ function lastLetter(word){
 
 console.log('test');
 console.log(lastLetter('test'));
+
+*/
