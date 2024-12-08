@@ -84,3 +84,10 @@ console.log(longer('pizza', 'soup'));
 
 */
 
+function lastLetter(word){
+    let lastLetter = word.length -1;
+    return word[lastLetter];
+}
+
+console.log('test');
+console.log(lastLetter('test'));
