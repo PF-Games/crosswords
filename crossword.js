@@ -54,11 +54,16 @@ console.log ('The next number to ' + integers[index] + ' is ' + getNeighbor(inte
 
 */
 
+/* SEARCH ALGORITHM OVER A STRING
 
-function printCharacters(string){
+function printCharacters(word){
     for (let i = 0; i < string.length; i++){
-        console.log(string[i]);
+        console.log(word[i]);
     }
 }
 
 printCharacters('Crossword')
+
+*/
+
+function longer(firstWord, secondWord)
