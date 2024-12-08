@@ -37,6 +37,8 @@ for (let item of shapes){
 
 */
 
+/* FUNCTION TO FIND NEXT INDEX IN AN ARRAY
+
 let integers = [
      1, 2, 3, 4, 5, 6, 7, 8, 9
 ];
@@ -49,3 +51,14 @@ function getNeighbor(integers, i){
 }
 
 console.log ('The next number to ' + integers[index] + ' is ' + getNeighbor(integers, index));
+
+*/
+
+
+function printCharacters(string){
+    for (let i = 0; i < string.length; i++){
+        console.log(string[i]);
+    }
+}
+
+printCharacters('Crossword')
