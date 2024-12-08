@@ -37,6 +37,8 @@ for (let item of shapes){
 
 */
 
+////////////////////////////////////////////////////////////////
+
 /* FUNCTION TO FIND NEXT INDEX IN AN ARRAY
 
 let integers = [
@@ -54,6 +56,8 @@ console.log ('The next number to ' + integers[index] + ' is ' + getNeighbor(inte
 
 */
 
+////////////////////////////////////////////////////////////////
+
 /* SEARCH ALGORITHM OVER A STRING
 
 function printCharacters(word){
@@ -66,4 +70,17 @@ printCharacters('Crossword')
 
 */
 
-function longer(firstWord, secondWord)
+/* FUNCTION TO FIND THE LONGER WORD
+
+function longer(firstWord, secondWord){
+    if (firstWord.length > secondWord.length){
+        return firstWord;
+    } else {
+        return secondWord;
+    }
+}
+
+console.log(longer('pizza', 'soup'));
+
+*/
+
