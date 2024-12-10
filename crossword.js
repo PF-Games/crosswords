@@ -98,7 +98,9 @@ console.log(lastLetter('test'));
 
 */
 
+//////////////////////////////////////
 
+/* FUNCTION TO CHECK WHETHER A WORD FITS AN EXISTING SPACE THAT ALREADY CONTAINS LETTERS
 
 function check(space, word){
     if(space.length !== word.length){
@@ -119,10 +121,12 @@ console.log('lion');
 console.log(check('-a-t', 'lion'));
 console.log(check('-a-t', 'bait'));
 
-//////////////////////////////////
+ */
+
+////////////////////////////////////
 
 
-/* MISMA VERIFICACION PARA LA PRIMERA PARTE DE LA ANTERIOR PERO SIMPLIFICADA
+/* SAME VERIFICATION FOR THE FIRST IF, BUT USING A BOOLEAN INSTEAD FOR MORE CONSISTENCY
 
 function check(space, word){
     return (space.length === word.length)
