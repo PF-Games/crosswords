@@ -199,7 +199,9 @@ console.log(findLongestWord(dict));
 
 */
 
+/////////////////////////////////////////////////////////
 
+/*
 function findRepeatedWords(array) {
     let wordCount = {};
     let repeatedWords = [];
@@ -221,3 +223,18 @@ function findRepeatedWords(array) {
 
 
 console.log(findRepeatedWords(dict)); 
+*/
+
+
+function mapString(string){
+    let map = {};
+    for (let i = 0; i < string.length; i++){
+        let letter = string[i];
+        if(map[letter]) {
+            map[letter].push(i);
+        }else{
+            map[letter] = [i];
+        }
+    }
+    return map;
+}
