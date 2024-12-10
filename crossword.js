@@ -97,3 +97,35 @@ console.log('test');
 console.log(lastLetter('test'));
 
 */
+
+
+
+function check(space, word){
+    if(space.length !== word.length){
+        return false;
+    }
+
+
+for (let i = 0; i < space.length; i++){
+    if (space[i] !== '-' && space[i] !== word[i]){
+        return false;
+    }
+}
+return true;
+}
+
+console.log('-a-t');
+console.log('lion');
+console.log(check('-a-t', 'lion'));
+console.log(check('-a-t', 'bait'));
+
+//////////////////////////////////
+
+
+/* MISMA VERIFICACION PARA LA PRIMERA PARTE DE LA ANTERIOR PERO SIMPLIFICADA
+
+function check(space, word){
+    return (space.length === word.length)
+}
+
+*/
