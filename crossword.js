@@ -1,15 +1,9 @@
-const dictionary = [
-    "abacus", "ability", "able", "absence", "academy", "account", "accuse", "advice", "agency", "ale", "alcohol", "analysis",
-    "animal", "anxiety", "appearance", "apple", "arrival", "balance", "biology", "budget", "capital", "courage", "digital",
-    "election", "empire", "enough", "failure", "feature", "festival", "flavor", "fortune", "freedom", "garden",
-    "guitar", "harmony", "hospital", "imagine", "impact", "journey", "justice", "laptop", "library", "machine",
-    "market", "mentor", "notebook", "obvious", "package", "piano", "project", "quality", "reality", "refugee",
-    "relevant", "school", "service", "success", "theory", "universe", "vehicle", "village", "wedding", "wonder",
-    "xenon", "yellow", "yoga", "zebra", "zoom" "bicycle", "calendar", "dolphin", "elephant", "furniture", "guitar", "horizon", "island", "jacket",
-    "koala", "lemon", "mountain", "notebook", "octopus", "piano", "quaint", "robot", "sunflower", "tiger",
-    "umbrella", "village", "whistle", "xenon", "yellow", "zebra", "antique", "button", "climate", "dynamo",
-    "energy", "freedom", "glory", "harmony", "ink", "jungle", "kettle", "lantern", "mango", "nectar", "orchestra",
-    "puzzle", "quiet", "riddle", "story", "treasure", "understand", "velocity", "wave", "x-ray", "yoga", "zenith", "book"
+const dict = [
+    "abacus", "ability", "able", "absence", "academy", "account", "accuse", "advice", "agency", "ale", "alcohol", "analysis", "animal", "anxiety", "ape", "appearance", "apple", "arrival", "balance", "biology", "budget", "capital", "courage", "digital",  "election", "empire", "enough", "failure", "feature", "festival", "flavor", "fortune", "freedom", "garden","guitar", "harmony", "hospital", "imagine", "impact", "journey", "justice", "laptop", "library", "machine", "market", "mentor", "notebook", "obvious", "package", "piano", "project", "quality", "reality", "refugee", "relevant", "school", "service", "success", "theory", "universe", "vehicle", "village", "wedding", "wonder", "xenon", "yellow", "yoga", "zebra", "zoom", "bicycle", "calendar", "dolphin", "elephant", "furniture", "guitar", "horizon", "island", "jacket",
+    "koala", "lemon", "mountain", "octopus", "piano", "quaint", "robot", "sunflower", "tiger", "umbrella", "village", "whistle", "xenon", "yellow", "zebra", "antique", "button", "climate", "dynamo", "energy", "freedom", "glory", "harmony", "ink", "jungle", "kettle", "lantern", "mango", "nectar", "orchestra", "puzzle", "quiet", "riddle", "story", "treasure", "understand", "velocity", "wave", "x-ray", "yoga", "zenith", "book", "sun", "flower", "pink",  "apple", "ale", "able", "ape", "bale", "banana", "bat", "at", "cat", "batman",
+    "baker", "ball", "balloon", "bar", "bat", "book", "bottle", "bore", "brake", "brake", "care", "cap", "cane", "cat", "came", "cot", "coat", "taco", "tap", "tiger", "trip", "tree", "tune", "tug", "turtle", "star", "start", "stamp", "stand", "slip", "slate", "sale", "salt", "sat", "start", "step", "ship", "shine", "stack", "skip", "skirt",
+    "sand", "rose", "rope", "rip", "ripple", "rat", "rate", "race", "racecar", "ran", "run","roll", "rose", "ring", "ringed", "read", "reap", "ripped", "repeat", "stare", "state", "seal", "sleep", "sick", "stick", "stitch", "stop", "step", "soar", "stone", "tone", "token", "tinker", "trick", "trial", "trip", "trap", "tap", "tone", "text", "total",
+    "tap", "task", "tail", "tall", "tray", "thick", "thrift", "thin", "thank", "tired", "taste", "trouble", "turn", "tree", "tub", "under", "up", "use", "uniform", "understand"
   ];
 
 
@@ -149,11 +143,58 @@ function check(space, word){
 
 */
 
-fetch('dictionary.json')
 
-  .then(response => response.text())
-  .then(data => {
-    const dictionary = data.split('\n').map(word => word.trim());
-    console.log(dictionary);  // Use the dictionary in your crossword game
-  })
-  .catch(error => console.error('Error loading dictionary:', error));
+//////////////////////////////////////
+
+/* FUNCTION TO FIND SUBSEQUENCES OF A WORD WITHIN ANOTHER WORD IN MY MINI DICTIONARY
+
+function isSubsequence(target, word) {
+    let i = 0;
+    for (let char of target) {
+        if (char === word[i]) {
+            i++;
+            if (i === word.length) {
+                return true;  
+            }
+        }
+    }
+    return false; 
+}
+
+
+function findSubsequences(word, dict) {
+    const subsequences = [];
+    for (let dictWord of dict) {
+        if (isSubsequence(word, dictWord)) {
+            subsequences.push(dictWord);
+        }
+    }
+    return subsequences;
+}
+
+// Example usage
+const targetWord = "apple";
+
+const subsequences = findSubsequences(targetWord, dict);
+console.log(subsequences);
+
+*/
+
+//////////////////////////////////////
+
+
+/* FUNCTION TO FIND THE LONGEST WORD WITHIN MY MINI DICTIONARY
+
+function findLongestWord(array){
+    let longestWord = '';
+    for (var element of array){
+        if (element.length > longestWord.length){
+            longestWord = element;
+        }
+    }
+    return longestWord;
+}
+
+console.log(findLongestWord(dict));
+
+*/
