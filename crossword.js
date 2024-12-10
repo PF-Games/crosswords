@@ -1,3 +1,18 @@
+const dictionary = [
+    "abacus", "ability", "able", "absence", "academy", "account", "accuse", "advice", "agency", "ale", "alcohol", "analysis",
+    "animal", "anxiety", "appearance", "apple", "arrival", "balance", "biology", "budget", "capital", "courage", "digital",
+    "election", "empire", "enough", "failure", "feature", "festival", "flavor", "fortune", "freedom", "garden",
+    "guitar", "harmony", "hospital", "imagine", "impact", "journey", "justice", "laptop", "library", "machine",
+    "market", "mentor", "notebook", "obvious", "package", "piano", "project", "quality", "reality", "refugee",
+    "relevant", "school", "service", "success", "theory", "universe", "vehicle", "village", "wedding", "wonder",
+    "xenon", "yellow", "yoga", "zebra", "zoom" "bicycle", "calendar", "dolphin", "elephant", "furniture", "guitar", "horizon", "island", "jacket",
+    "koala", "lemon", "mountain", "notebook", "octopus", "piano", "quaint", "robot", "sunflower", "tiger",
+    "umbrella", "village", "whistle", "xenon", "yellow", "zebra", "antique", "button", "climate", "dynamo",
+    "energy", "freedom", "glory", "harmony", "ink", "jungle", "kettle", "lantern", "mango", "nectar", "orchestra",
+    "puzzle", "quiet", "riddle", "story", "treasure", "understand", "velocity", "wave", "x-ray", "yoga", "zenith", "book"
+  ];
+
+
 /* FUNCTION PRINT LAST ITEM
 
 let supplies = [
@@ -133,3 +148,12 @@ function check(space, word){
 }
 
 */
+
+fetch('dictionary.json')
+
+  .then(response => response.text())
+  .then(data => {
+    const dictionary = data.split('\n').map(word => word.trim());
+    console.log(dictionary);  // Use the dictionary in your crossword game
+  })
+  .catch(error => console.error('Error loading dictionary:', error));
