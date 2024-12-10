@@ -1,9 +1,9 @@
 const dict = [
-    "abacus", "ability", "able", "absence", "academy", "account", "accuse", "advice", "agency", "ale", "alcohol", "analysis", "animal", "anxiety", "ape", "appearance", "apple", "arrival", "balance", "biology", "budget", "capital", "courage", "digital",  "election", "empire", "enough", "failure", "feature", "festival", "flavor", "fortune", "freedom", "garden","guitar", "harmony", "hospital", "imagine", "impact", "journey", "justice", "laptop", "library", "machine", "market", "mentor", "notebook", "obvious", "package", "piano", "project", "quality", "reality", "refugee", "relevant", "school", "service", "success", "theory", "universe", "vehicle", "village", "wedding", "wonder", "xenon", "yellow", "yoga", "zebra", "zoom", "bicycle", "calendar", "dolphin", "elephant", "furniture", "guitar", "horizon", "island", "jacket",
-    "koala", "lemon", "mountain", "octopus", "piano", "quaint", "robot", "sunflower", "tiger", "umbrella", "village", "whistle", "xenon", "yellow", "zebra", "antique", "button", "climate", "dynamo", "energy", "freedom", "glory", "harmony", "ink", "jungle", "kettle", "lantern", "mango", "nectar", "orchestra", "puzzle", "quiet", "riddle", "story", "treasure", "understand", "velocity", "wave", "x-ray", "yoga", "zenith", "book", "sun", "flower", "pink",  "apple", "ale", "able", "ape", "bale", "banana", "bat", "at", "cat", "batman",
-    "baker", "ball", "balloon", "bar", "bat", "book", "bottle", "bore", "brake", "brake", "care", "cap", "cane", "cat", "came", "cot", "coat", "taco", "tap", "tiger", "trip", "tree", "tune", "tug", "turtle", "star", "start", "stamp", "stand", "slip", "slate", "sale", "salt", "sat", "start", "step", "ship", "shine", "stack", "skip", "skirt",
-    "sand", "rose", "rope", "rip", "ripple", "rat", "rate", "race", "racecar", "ran", "run","roll", "rose", "ring", "ringed", "read", "reap", "ripped", "repeat", "stare", "state", "seal", "sleep", "sick", "stick", "stitch", "stop", "step", "soar", "stone", "tone", "token", "tinker", "trick", "trial", "trip", "trap", "tap", "tone", "text", "total",
-    "tap", "task", "tail", "tall", "tray", "thick", "thrift", "thin", "thank", "tired", "taste", "trouble", "turn", "tree", "tub", "under", "up", "use", "uniform", "understand"
+    "abacus", "ability", "able", "absence", "academy", "account", "accuse", "advice", "agency", "ale", "alcohol", "analysis", "animal", "anxiety", "ape", "appearance", "apple", "arrival", "balance", "biology", "budget", "capital", "courage", "digital",  "election", "empire", "enough", "failure", "feature", "festival", "flavor", "fortune", "freedom", "garden","guitar", "hospital", "imagine", "impact", "journey", "justice", "laptop", "library", "machine", "market", "mentor", "notebook", "obvious", "package", "piano", "project", "quality", "reality", "refugee", "relevant", "school", "service", "success", "theory", "universe", "vehicle", "wedding", "wonder", "zoom", "bicycle", "calendar", "dolphin", "elephant", "furniture", "horizon", "island", "jacket",
+    "koala", "lemon", "mountain", "octopus", "quaint", "robot", "sunflower", "tiger", "umbrella", "village", "whistle", "xenon", "yellow", "zebra", "antique", "button", "climate", "dynamo", "energy", "glory", "harmony", "ink", "jungle", "kettle", "lantern", "mango", "nectar", "orchestra", "puzzle", "quiet", "riddle", "story", "treasure", "understand", "velocity", "wave", "x-ray", "yoga", "zenith", "book", "sun", "flower", "pink", "bale", "banana", "at", "batman",
+    "baker", "ball", "balloon", "bar", "bat", "bottle", "bore", "brake", "care", "cap", "cane", "cat", "came", "cot", "coat", "taco", "tap", "trip", "tree", "tune", "tug", "turtle", "star", "stamp", "stand", "slip", "slate", "sale", "salt", "sat", "ship", "shine", "stack", "skip", "skirt",
+    "sand", "rose", "rope", "rip", "ripple", "rat", "rate", "race", "racecar", "ran", "run","roll", "ring", "ringed", "read", "reap", "ripped", "repeat", "stare", "state", "seal", "sleep", "sick", "stick", "stitch", "stop", "step", "soar", "stone", "tome", "token", "tinker", "trick", "trial", "trap", "tone", "text", "total",
+    "task", "tail", "tall", "tray", "thick", "thrift", "thin", "thank", "tired", "taste", "trouble", "turn", "tub", "under", "up", "use", "uniform", 
   ];
 
 
@@ -198,3 +198,26 @@ function findLongestWord(array){
 console.log(findLongestWord(dict));
 
 */
+
+
+function findRepeatedWords(array) {
+    let wordCount = {};
+    let repeatedWords = [];
+
+    
+    for (let word of array) {
+        wordCount[word] = (wordCount[word] || 0) + 1;
+    }
+
+    
+    for (let word in wordCount) {
+        if (wordCount[word] > 1) {
+            repeatedWords.push(word);
+        }
+    }
+
+    return repeatedWords;
+}
+
+
+console.log(findRepeatedWords(dict)); 
