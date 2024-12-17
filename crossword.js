@@ -246,7 +246,7 @@ mapString('abba')
 
 */
 
-//////////////////// FUNCTION COMPARE LETTERS FROM OBJECTS
+//////////////////// FUNCTION COMPARE LETTERS FROM OBJECTS AND CHECK IF ALL OF THEM EXISTS
 //This only checks if the letters match, however this doesn't check their order
 /*
 
