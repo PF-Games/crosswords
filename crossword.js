@@ -247,14 +247,38 @@ mapString('abba')
 */
 
 //////////////////// FUNCTION COMPARE LETTERS FROM OBJECTS
+//This only checks if the letters match, however this doesn't check their order
+/*
+
+let object1 = { h: 1, e: 2, l: 3, o: 4 };
+let object2 = { c: 1, a: 2, t: 3 };
+let object3 = { b: 1, a: 2, n: 3, a: 4, n: 5 };
+let object4 = { d: 1, o: 2, g: 3 };
 
 function compareLetters(word, object){
   for (let letter of word){  
-    if(object[letter]){
-
-    }else{
+    if (!(object[letter])){
         return false;
     }
 }
    return true;
 }
+
+*/
+
+////////////////Auxiliary function to check the order of the letters
+
+let array1 = [3, 5, 7, 9, 12];
+let minIndex1 = 7;
+
+function findNextIndex(array, minIndex ){
+    for(var i of array){
+        if(i >= minIndex){
+            return i + 1;
+        }
+    }
+    return false;
+};
+
+
+
