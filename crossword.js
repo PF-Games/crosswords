@@ -225,7 +225,7 @@ function findRepeatedWords(array) {
 console.log(findRepeatedWords(dict)); 
 */
 
-
+/*
 function mapString(string){
     let map = {};
     for (let i = 0; i < string.length; i++){
@@ -238,3 +238,30 @@ function mapString(string){
     }
     return map;
 }
+mapString('abba')
+
+*/
+
+////////////// CHECK. ANOTHER WAY OF DEFINING THE FUNCTION
+///Function to create an object from a string. 
+// The object requires an attribute for each character of the string. 
+///Each attribute must store an array of indexes in the keys of the characters.
+
+/*
+
+function mapString(string) {
+    let result = {}; 
+
+    
+    for (let i = 0; i < string.length; i++) {
+                
+        if (result[string[i]]) {
+            result[string[i]].push(i);
+        } else {
+            result[string[i]] = [i];
+        }
+    return result;
+    };
+mapString('abba')
+
+
