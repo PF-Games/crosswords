@@ -225,6 +225,10 @@ function findRepeatedWords(array) {
 console.log(findRepeatedWords(dict)); 
 */
 
+///Function to create an object from a string. 
+// The object requires an attribute for each character of the string. 
+///Each attribute must store an array of indexes in the keys of the characters.
+
 /*
 function mapString(string){
     let map = {};
@@ -242,26 +246,15 @@ mapString('abba')
 
 */
 
-////////////// CHECK. ANOTHER WAY OF DEFINING THE FUNCTION
-///Function to create an object from a string. 
-// The object requires an attribute for each character of the string. 
-///Each attribute must store an array of indexes in the keys of the characters.
+//////////////////// FUNCTION COMPARE LETTERS FROM OBJECTS
 
-/*
+function compareLetters(word, object){
+  for (let letter of word){  
+    if(object[letter]){
 
-function mapString(string) {
-    let result = {}; 
-
-    
-    for (let i = 0; i < string.length; i++) {
-                
-        if (result[string[i]]) {
-            result[string[i]].push(i);
-        } else {
-            result[string[i]] = [i];
-        }
-    return result;
-    };
-mapString('abba')
-
-
+    }else{
+        return false;
+    }
+}
+   return true;
+}
