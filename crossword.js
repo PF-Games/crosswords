@@ -79,7 +79,7 @@ printCharacters('Crossword')
 
 */
 
-/* FUNCTION TO FIND THE LONGER WORD
+/* FUNCTION TO FIND THE LONGEST WORD
 
 function longer(firstWord, secondWord){
     if (firstWord.length > secondWord.length){
@@ -149,7 +149,7 @@ function check(space, word){
 /* FUNCTION TO FIND SUBSEQUENCES OF A WORD WITHIN ANOTHER WORD IN MY MINI DICTIONARY
 
 function isSubsequence(target, word) {
-    let i = 0;
+    let i = -1;
     for (let char of target) {
         if (char === word[i]) {
             i++;
@@ -275,7 +275,7 @@ let minIndex1 = 7;
 
 function findNextIndex(array, minIndex ){
     for(var i of array){
-        if(i >= minIndex){
+        if(i > minIndex){
             return i + 1;
         }
     }
@@ -286,11 +286,11 @@ function findNextIndex(array, minIndex ){
 
 /* THIS FUNCTION SHOULD FIND SUBSEQUENCES OF STRINGS IN ARRAYS
 
-function isSubsequence(word, target) {
-    let minIndex = 0;
+function isSubsequence(word, targetMap) {
+    let minIndex = -1;
     for (let letter of word) {
-        if (target[letter]) {
-            minIndex = findNextIndex(target[letter], minIndex);
+        if (targetMap[letter]) {
+            minIndex = findNextIndex(targetMap[letter], minIndex);
             if (minIndex === false) {
                 return false;  
             }
@@ -310,5 +310,18 @@ console.log(isSubsequence('hello', object1))
 
 ////////////////// LONGEST SUBSEQUENCE
 
+function longestMatch(string, dict){
+  let listOfSubsequences = [];
+  let map = mapString(string); 
+    for (var word of dict){
+    
+        if (isSubsequence(word, map)){
+            listOfSubsequences.push(word);
+        }
+    }
+    return findLongestWord(listOfSubsequences)
+}
 
-
+// Test cases
+console.log(findLongestWord(dict)); // 
+console.log(longestMatch('javascript', dict)); 
