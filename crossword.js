@@ -268,6 +268,8 @@ function compareLetters(word, object){
 
 ////////////////Auxiliary function to check the order of the letters
 
+/*
+
 let array1 = [3, 5, 7, 9, 12];
 let minIndex1 = 7;
 
@@ -279,6 +281,34 @@ function findNextIndex(array, minIndex ){
     }
     return false;
 };
+
+*/
+
+/* THIS FUNCTION SHOULD FIND SUBSEQUENCES OF STRINGS IN ARRAYS
+
+function isSubsequence(word, target) {
+    let minIndex = 0;
+    for (let letter of word) {
+        if (target[letter]) {
+            minIndex = findNextIndex(target[letter], minIndex);
+            if (minIndex === false) {
+                return false;  
+            }
+        } else{ 
+            return false;
+        }
+    }
+    return true; 
+};
+
+let object1 = { h: 1, e: 2, l: 3, o: 4 };
+console.log(isSubsequence('hello', object1))
+
+*/
+
+
+
+////////////////// LONGEST SUBSEQUENCE
 
 
 
